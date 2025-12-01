@@ -63,6 +63,29 @@ function bookstore_register_genre_taxonomy()
     register_taxonomy("genre", "book", $args);
 }
 
+add_action("init", "bookstore_register_author_taxonomy");
+function bookstore_register_author_taxonomy()
+{
+    $args = [
+        "labels" => [
+            "name" => "Authors",
+            "singular_name" => "Author",
+            "edit_item" => "Edit Author",
+            "update_item" => "Update Author",
+            "add_new_item" => "Add New Author",
+            "new_item_name" => "New Author Name",
+            "menu_name" => "Authors",
+            "all_items" => "All Authors",
+            "view_item" => "View Author",
+        ],
+        "hierarchical" => false,
+        "rewrite" => ["slug" => "author"],
+        "show_in_rest" => true,
+    ];
+
+    register_taxonomy("author", "book", $args);
+}
+
 add_filter("postmeta_form_keys", "bookstore_add_isbn_to_quick_edit", 10, 2);
 function bookstore_add_isbn_to_quick_edit($keys, $post)
 {
