@@ -32,10 +32,7 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __(
-				'Copyright Date – hello from the editor!',
-				'copyright-date'
-			) }
+			{ __( 'Copyright Date Block – hello from the editor!', 'copyright-date-block' ) }
 		</p>
 	);
 }
