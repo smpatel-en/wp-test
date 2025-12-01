@@ -10,14 +10,13 @@ if (!defined("ABSPATH")) {
 }
 
 add_action("init", "bookstore_register_book_post_type");
-
 function bookstore_register_book_post_type()
 {
     $args = [
-        "lables" => [
+        "labels" => [
             "name" => "Books",
             "singular_name" => "Book",
-            "mune_name" => "Books",
+            "menu_name" => "Books",
             "add_new" => "Add New Book",
             "add_new_item" => "Add New Book",
             "new_item" => "New Book",
