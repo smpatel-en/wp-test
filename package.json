@@ -2,13 +2,13 @@
   "name": "wp-test",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/smpatel-en/wp-twst#readme",
+  "homepage": "https://github.com/smpatel-en/wp-test#readme",
   "bugs": {
-    "url": "https://github.com/smpatel-en/wp-twst/issues"
+    "url": "https://github.com/smpatel-en/wp-test/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smpatel-en/wp-twst.git"
+    "url": "git+https://github.com/smpatel-en/wp-test.git"
   },
   "license": "ISC",
   "author": "",
