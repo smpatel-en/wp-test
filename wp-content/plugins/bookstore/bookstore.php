@@ -15,17 +15,20 @@ function bookstore_register_book_post_type()
     $args = [
         "labels" => [
             "name" => "Books",
-            "singular_name" => "Book",
             "menu_name" => "Books",
-            "add_new" => "Add New Book",
+            "all_items" => "All Books",
             "add_new_item" => "Add New Book",
-            "new_item" => "New Book",
+            "singular_name" => "Book",
             "edit_item" => "Edit Book",
             "view_item" => "View Book",
-            "all_items" => "All Books",
+            "search_items" => "Search Books",
+            "not_found" => "No Books Found",
+            "not_found_in_trash" => "No Books Found in Trash",
+
+            "add_new" => "Add New Book",
+            "new_item" => "New Book",
         ],
         "public" => true,
-        "has_archive" => true,
         "show_in_rest" => true,
         "rest_base" => "books",
         "supports" => [
@@ -100,7 +103,6 @@ function bookstore_add_admin_menu()
         "bookstore_render_booklist",
     );
 }
-
 function bookstore_render_booklist()
 {
     ?>
