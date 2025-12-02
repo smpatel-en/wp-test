@@ -25,9 +25,9 @@ if (!defined("ABSPATH")) {
  * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
  */
 
-add_action("init", "create_block_copyright_date_block_block_init");
+add_action("init", "create_copyright_date_block_init");
 
-function create_block_copyright_date_block_block_init()
+function create_copyright_date_block_init()
 {
 	/**
 	 * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)

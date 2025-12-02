@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from "@wordpress/block-editor";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -16,9 +16,10 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save() {
+	const currentYear = new Date().getFullYear().toString();
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Copyright Date Block – hello from the saved content!' }
+		<p {...useBlockProps.save()}>
+			{"Copyright"} &copy; 2004 - {currentYear}
 		</p>
 	);
 }
