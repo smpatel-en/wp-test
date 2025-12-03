@@ -182,10 +182,11 @@ function bookstore_admin_enqueue_scripts()
     );
 }
 
+// Custom Rest Fields
 add_action("rest_api_init", "bookstore_add_rest_fields");
 function bookstore_add_rest_fields()
 {
-    register_rest_field("book", "isbn", [
+    register_rest_field("book", "isbn2", [
         "get_callback" => "bookstore_get_isbn",
         "update_callback" => "bookstore_update_isbn",
         "schema" => null,
@@ -194,10 +195,10 @@ function bookstore_add_rest_fields()
 
 function bookstore_get_isbn($book)
 {
-    return get_post_meta($book["id"], "isbn", true);
+    return get_post_meta($book["id"], "isbn2", true);
 }
 
 function bookstore_update_isbn($value, $book)
 {
-    return update_post_meta($book["id"], "isbn", $value);
+    return update_post_meta($book->ID, "isbn2", $value);
 }
